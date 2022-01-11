@@ -41,6 +41,12 @@ public:
 	    }
         return false;
 	}
+	
+	void print_graph(){
+	    for(auto edge : edges){
+	        cout<<edge.first<<"-->"<<edge.second<<endl;
+	    }
+	}
 };
 
 int main()
@@ -55,6 +61,7 @@ int main()
     cout<<g->is_edge_present("ram","shyam")<<endl;
     cout<<g->is_edge_present("ram","sachin")<<endl;
     cout<<g->is_edge_present("sachin","rajesh")<<endl;
-
+    g->print_graph();
     return 0;
 }
+
