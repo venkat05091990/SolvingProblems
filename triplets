@@ -11,7 +11,7 @@ vector<vector<int>> triplets(vector<int> nums, int targetSum){
     // result vector
     vector<vector<int>> result;
         
-    for(int i=0; i<size-3; i++){
+    for(int i=0; i<=size-3; i++){
         int complement = targetSum - nums[i];
         
         //two pointers
