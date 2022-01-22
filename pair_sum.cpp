@@ -7,8 +7,7 @@ vector<int> pairSum(vector<int> arr, int Sum){
 
 	unordered_set<int> s;
 	vector<int> result;
-
-    cout<<endl;
+	
 	for(int i=0;i<arr.size();i++)
 	{
 		int comp = Sum - arr[i];
@@ -20,12 +19,6 @@ vector<int> pairSum(vector<int> arr, int Sum){
 			return result;
 		}
         
-        cout<<"iteration "<<i<<endl; 
-        for(int num: s){
-            cout<<num;            
-        }
-        cout<<endl;
-
 		s.insert(arr[i]);
 	}
 	return result;
