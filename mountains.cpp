@@ -25,7 +25,7 @@ int mountain(vector<int> nums){
             leftptr--;
         }
         
-        while(rightptr<n && nums[rightptr]>nums[rightptr+1]){
+        while(rightptr<n-1 && nums[rightptr]>nums[rightptr+1]){
             rightptr++;
         }
         
