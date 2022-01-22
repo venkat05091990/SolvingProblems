@@ -1,0 +1,57 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<vector<int>> triplets(vector<int> nums, int targetSum){
+    //sort the input vector
+    sort(nums.begin(), nums.end());
+    
+    int size = nums.size();
+    
+    // result vector
+    vector<vector<int>> result;
+        
+    for(int i=0; i<size-3; i++){
+        int complement = targetSum - nums[i];
+        
+        //two pointers
+        int start_index = i+1;
+        int end_index = size-1;
+    
+        while(start_index < end_index){
+            int currentSum = nums[start_index]+nums[end_index];
+            
+            if(complement == currentSum){
+                result.push_back({nums[i],nums[start_index],nums[end_index]});
+                start_index++;
+                end_index--;
+            }
+            else if(currentSum < targetSum){
+                start_index++;
+            }
+            else{
+                end_index--;
+            }
+        }
+    }
+    return result;
+} 
+
+
+int main() {
+    // Write C++ code here
+    vector<int> nums = {1,2,3,4,5,6,7,8,9,15};
+    int targetSum = 18;
+    
+    vector<vector<int>> result;
+    result = triplets(nums, targetSum);
+    
+    for(vector<int> v : result){
+        for(int num: v){
+            cout<<num<<",";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
