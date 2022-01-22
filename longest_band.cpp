@@ -18,10 +18,12 @@ int longestband(vector<int> nums){
         {
             int current = nums[i];
             int count = 1;
+            
             while(s.find(current+1)!=s.end()){
                 count++;
                 current++;
             }
+            
             if(count > longest_band){
                 longest_band = count;
             }
