@@ -1,0 +1,4 @@
+1. if sorted, use binary logic
+2. if not sorted , use unordered_set and find in O(1)
+3. Check hill peaks points
+4. Check valley points and left max hill and right max hil and get minimum of them - valley height
