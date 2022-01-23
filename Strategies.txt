@@ -3,3 +3,4 @@
 3. Check hill peaks points
 4. Check valley points and left max hill and right max hil and get minimum of them - valley height
 5. In subarrays sort, check the smallest out of order and largest out of order value and get their index
+6. In minimum swaps, check the non-intersecting cycles size, min swaps is size-1 of all such cycles
